@@ -1,21 +1,17 @@
 const productsContainer = document.getElementById('products');
 
 
-// Fetch products from the API
 fetch('https://fakestoreapi.com/products')
     .then(response => response.json())
     .then(products => {
         products.forEach(product => {
-            // Create product container
             const productElement = document.createElement('div');
             productElement.classList.add('product');
 
-            // Create anchor tag
             const anchor = document.createElement('a');
             anchor.href = `product.html?id=${product.id}`;
-            anchor.target = '_blank'; // Opens the link in a new tab
+            anchor.target = '_blank'; 
 
-            // Create product content
             const shortenDescription = product.description.split(' ').slice(0, 5).join(' ') + '...';
             anchor.innerHTML = `
                 <img src="${product.image}" alt="${product.title}">
@@ -25,10 +21,8 @@ fetch('https://fakestoreapi.com/products')
                 <p class="category">${product.category}</p>
             `;
 
-            // Append anchor to product container
             productElement.appendChild(anchor);
 
-            // Append product container to the products container
             productsContainer.appendChild(productElement);
 
         });
