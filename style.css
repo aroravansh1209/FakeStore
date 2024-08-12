@@ -3,7 +3,7 @@ body {
     margin: 0;
     padding: 0;
     background-color: #f4f4f4;
-    text-align: center; /* Center text in the body */
+    text-align: center;
 }
 
 header {
@@ -44,7 +44,7 @@ h1 {
 
 main {
     padding: 2em;
-    text-align: center; /* Center text in the main content */
+    text-align: center;
 }
 
 h2 {
@@ -71,7 +71,7 @@ h2 {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     box-sizing: border-box;
     transition: transform 0.2s, box-shadow 0.2s;
-    text-align: center; /* Center text in the product box */
+    text-align: center;
 }
 
 .product img {
@@ -109,7 +109,7 @@ h2 {
 }
 
 #product-details {
-    max-width: 800px; /* Limit the width of the details section */
+    max-width: 800px;
     margin: 0 auto;
     padding: 2em;
     background-color: #fff;
@@ -155,4 +155,69 @@ footer a {
     color: #fff;
     text-decoration: none;
     font-weight: bold;
+}
+
+/* Mobile Responsiveness */
+@media only screen and (max-width: 768px) {
+    nav ul li {
+        display: block;
+        margin: 0.5em 0;
+    }
+
+    .product {
+        width: calc(50% - 1.5em);
+    }
+
+    #products {
+        gap: 1em;
+    }
+
+    header, footer {
+        font-size: 1em;
+        padding: 1em;
+    }
+
+    h1 {
+        font-size: 1.5em;
+    }
+
+    main {
+        padding: 1em;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .product {
+        width: calc(100% - 2em);
+        margin: 0 auto;
+    }
+
+    #products {
+        gap: 1em;
+    }
+
+    header, footer {
+        font-size: 0.8em;
+        padding: 0.8em;
+    }
+
+    h1 {
+        font-size: 1.2em;
+    }
+
+    main {
+        padding: 0.8em;
+    }
+
+    h2 {
+        font-size: 1.2em;
+    }
+
+    #product-details {
+        padding: 1em;
+    }
+
+    #product-details .price {
+        font-size: 1.2em;
+    }
 }
